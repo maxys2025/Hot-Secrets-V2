@@ -1,6 +1,5 @@
 // Lista delle domande con categorie e colori
 const questions = [
-const questions = [
   { text: "A letto, preferisci dominare o essere dominato?", category: "sessualità" },
   { text: "Quale caratteristica fisica ti fa impazzire in un partner?", category: "sessualità" },
   { text: "Hai mai avuto un’avventura di una notte?", category: "sessualità" },
@@ -36,7 +35,7 @@ const questions = [
   { text: "Cosa ne pensi delle relazioni aperte?", category: "sessualità" },
   { text: "Hai mai usato cibo a letto?", category: "sessualità" },
   { text: "Sei mai uscito senza mutande?", category: "sessualità" },
-  { text: Hai mai fatto una videochat hot?", category: "sessualità" },
+  { text: "Hai mai fatto una videochat hot?", category: "sessualità" },
   { text: "Qual è la tua parte del corpo che preferisci?", category: "sessualità" },
   { text: "Hai mai pensato di provare il BDSM?", category: "sessualità" },
   { text: "Invieresti foto intime per soldi?", category: "sessualità" },
