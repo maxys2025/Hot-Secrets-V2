@@ -45,8 +45,8 @@ body {
 
 /* Tessera */
 .card {
-  width: 120px;
-  height: 160px;
+  width: 100px;
+  height: 60px;
   perspective: 1000px; /* Effetto 3D */
 }
 
