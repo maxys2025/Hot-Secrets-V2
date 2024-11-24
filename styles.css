@@ -74,8 +74,8 @@ body {
   align-items: center; /* Centra verticalmente */
   text-align: center; /* Assicura l'allineamento del testo su più righe */
   line-height: 1.2; /* Spaziatura tra le righe del testo */
-  font-size: 16px; /* Adatta la dimensione del testo */
-  font-weight: bold; /* Rende il testo più leggibile */
+  font-size: 12px; /* Adatta la dimensione del testo */
+  font-weight: normal; /* Rende il testo più leggibile */
   color: white;
   border-radius: 8px;
   padding: 5px; /* Aggiunge margini interni per evitare che il testo tocchi i bordi */
