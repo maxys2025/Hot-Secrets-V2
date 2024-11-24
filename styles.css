@@ -1,0 +1,105 @@
+/* Stile generale */
+body {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  flex-direction: column; /* Permette al contenuto di essere allineato verticalmente */
+  overflow-x: hidden; /* Impedisce lo scorrimento orizzontale */
+}
+
+.instructions {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7); /* Colore di sfondo semi-trasparente per evidenziare il testo */
+}
+
+.game-container {
+  width: 98vw; /* Imposta la larghezza al 100% della finestra */
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: auto; /* Scorrimento verticale se necessario */
+}
+
+/* Griglia di carte */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Colonne dinamiche che si adattano */
+  grid-gap: 10px; /* Spaziatura tra tessere */
+  width: 100%; /* Fa sì che occupi tutta la larghezza */
+  max-width: 100%; /* Limita la larghezza al 100% della pagina */
+  box-sizing: border-box; /* Include il padding nel calcolo della larghezza */
+}
+
+/* Tessera */
+.card {
+  width: 120px;
+  height: 160px;
+  perspective: 1000px; /* Effetto 3D */
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* Mantiene il 3D */
+  transition: transform 0.6s; /* Velocità del flip */
+  cursor: pointer;
+}
+
+.inner.flipped {
+  transform: rotateY(180deg); /* Gira la tessera */
+}
+
+/* Lati delle tessere */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Nasconde il lato opposto */
+  display: flex; /* Per centrare il contenuto */
+  justify-content: center; /* Centra orizzontalmente */
+  align-items: center; /* Centra verticalmente */
+  text-align: center; /* Assicura l'allineamento del testo su più righe */
+  line-height: 1.2; /* Spaziatura tra le righe del testo */
+  font-size: 16px; /* Adatta la dimensione del testo */
+  font-weight: bold; /* Rende il testo più leggibile */
+  color: white;
+  border-radius: 8px;
+  padding: 5px; /* Aggiunge margini interni per evitare che il testo tocchi i bordi */
+  box-sizing: border-box; /* Include padding nel calcolo delle dimensioni */
+}
+
+.front {
+  background: #555; /* Grigio scuro */
+}
+
+.back {
+  background: #f39c12; /* Arancione di default */
+  transform: rotateY(180deg); /* Inizia capovolta */
+}
+
+/* Colori delle categorie */
+.back[data-category="sport"] {
+  background: #3498db; /* Blu */
+}
+
+.back[data-category="sessualità"] {
+  background: #990000; /* Rosso */
+}
+
+.back[data-category="storia"] {
+  background: #27ae60; /* Verde */
+}
